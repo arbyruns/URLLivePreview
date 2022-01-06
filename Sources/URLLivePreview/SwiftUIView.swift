@@ -9,21 +9,21 @@ import SwiftUI
 
 @available(iOS 13.0, *)
 public struct SwiftUIView: View {
-//    public init() {}
-    var url: String
-    var width: CGFloat
-    var height: CGFloat
-    var alignment: Alignment
+    public var linkViewParameters: LinkViewParameters
+
+    public init(linkViewParameters: LinkViewParameters) {
+        self.linkViewParameters = linkViewParameters
+    }
 
     public var body: some View {
-        LinkCell(url: URL(string: url)!)
-            .frame(width: width, height: height, alignment: alignment)
+        LinkCell(url: URL(string: linkViewParameters.url)!)
+            .frame(width: linkViewParameters.width, height: linkViewParameters.height, alignment: linkViewParameters.alignment)
     }
 }
 
 @available(iOS 13.0, *)
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView(url: "https://www.apple.com/", width: 150, height: 150, alignment: .center)
+        SwiftUIView(linkViewParameters: LinkViewParameters())
     }
 }
