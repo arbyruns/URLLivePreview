@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-public struct SwiftUIView: View {
+public struct URLPreview: View {
     public var linkViewParameters: LinkViewParameters
 
     public init(linkViewParameters: LinkViewParameters) {
@@ -22,8 +22,8 @@ public struct SwiftUIView: View {
 }
 
 @available(iOS 13.0, *)
-struct SwiftUIView_Previews: PreviewProvider {
+struct URLPreview_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView(linkViewParameters: LinkViewParameters())
+        URLPreview(linkViewParameters: LinkViewParameters())
     }
 }
