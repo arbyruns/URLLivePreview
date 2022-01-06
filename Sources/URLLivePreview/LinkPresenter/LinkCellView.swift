@@ -7,7 +7,6 @@
 
 import SwiftUI
 import LinkPresentation
-// used from https://github.com/priyans05/Rich-LinksPreview-iOS-SwiftUI
 
 @available(iOS 13.0, *)
 public struct LinkCell: UIViewRepresentable {
