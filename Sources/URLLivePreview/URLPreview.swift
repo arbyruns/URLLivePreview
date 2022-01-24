@@ -16,7 +16,7 @@ public struct URLPreview: View {
     }
 
     public var body: some View {
-        LinkCell(url: (URL(string: linkViewParameters.url) ?? URL(string: "www.apple.com"))!)
+        LinkCell(url: (URL(string: linkViewParameters.url))!)
             .frame(width: linkViewParameters.width, height: linkViewParameters.height, alignment: linkViewParameters.alignment)
     }
 }
